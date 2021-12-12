@@ -1,0 +1,19 @@
+@mixin navbar {
+    padding-block: 10px;
+    padding-inline: 30px;
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+}
+
+.collapsed {
+    @include navbar;
+    align-items: center;
+    justify-content: center;
+}
+
+.notCollapsed {
+    @include navbar;
+    align-items: flex-end;
+    justify-content: flex-end;
+}

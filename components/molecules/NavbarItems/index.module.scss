@@ -1,0 +1,11 @@
+.navBarListContainer{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 20px;
+    width: fit-content;
+    height: fit-content;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,22 @@
+@mixin brandContainer {
+    display: flex;
+    align-items: center;
+    min-height: 10vh;
+    min-width: 100%;
+    padding-inline: 30px;
+    .brand {
+        color: #FFF;
+        font-size: 2.8rem;
+        margin: 0;
+    }
+}
+
+.collapsed {
+    justify-content: center;
+    @include brandContainer;
+}
+
+.notCollapsed {
+    justify-content: flex-start;
+    @include brandContainer;
+}
