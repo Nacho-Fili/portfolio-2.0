@@ -5,11 +5,12 @@ $size: 45px;
     background-color: transparent;
     width: $size;
     height: $size;
-    color: #FFF;
+    color: var(--text-color);
     align-self: center;
     border: 0;
     outline: none;
     &:hover {
         cursor: pointer;
+        color: var(--accent-primary-color);
     }
 }

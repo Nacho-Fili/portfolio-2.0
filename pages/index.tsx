@@ -1,7 +1,9 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Header from '../components/organisms/Header'
-import styles from '../styles/Home.module.css'
+import Sidebar from '../components/organisms/Sidebar'
+import Hero from '../components/organisms/Hero'
+import styles from '../styles/Home.module.scss'
+import '../styles/globals.css'
 
 const Home: NextPage = () => {
   return (
@@ -13,8 +15,8 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <Header />
-        
+        <Sidebar/>
+        <Hero/>
       </main>
     </div>
   )

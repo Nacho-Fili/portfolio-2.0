@@ -1,8 +1,11 @@
 .listItem {
     .link {
         text-decoration: none;
-        color: white;
+        color: var(--text-color);
         font-weight: bold;
         font-size: 1.4rem;
+        &:hover{
+            color: var(--accent-primary-color)
+        }
     }
 }
