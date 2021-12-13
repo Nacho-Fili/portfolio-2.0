@@ -1,7 +1,7 @@
 import CollapseButton from ".";
 
 export default {
-    title: 'CollapseButton',
+    title: 'atoms/buttons/CollapseButton',
     component: CollapseButton,
 }
 

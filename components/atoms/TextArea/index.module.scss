@@ -1,0 +1,17 @@
+.placeholder{
+    color: var(--text-color);
+    font-size: 0.8rem;
+    position: relative;
+}
+
+.textArea {
+    position: relative;
+    outline: none;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid var(--accent-primary-color);
+    color: #DDD;
+    font-weight: 700;
+    font-size: 1.5rem;
+    width: var(--input-width);
+}

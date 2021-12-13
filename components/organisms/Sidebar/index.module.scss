@@ -7,9 +7,10 @@ $sidebar-width: 50vw;
     min-height: 100%;
     padding-block: 5vh;
     background-color: var(--bg-alternative-color);
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
+    z-index: 2;
 }
 
 .collapsed {
@@ -22,6 +23,7 @@ $sidebar-width: 50vw;
 }
 
 .cover {
-    position: absolute;
+    position: fixed;
     height: 100%;
+    z-index: 2;
 }

@@ -3,7 +3,7 @@ import NavbarOption from "../../atoms/NavbarItem/types";
 
 
 export default {
-    title: 'NavBarItem List',
+    title: 'molecules/NavBarItemList',
     component: NavbarItems,
 }
 

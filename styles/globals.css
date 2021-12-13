@@ -8,6 +8,7 @@ body {
   --text-alternative-color: #CCCCFF;
   --accent-primary-color: #63E2EB;
   --accent-secondary-color: #00C2CB;
+  --input-width: 600px;
 }
 
 * {

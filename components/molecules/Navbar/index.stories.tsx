@@ -1,7 +1,7 @@
 import Navbar from ".";
 
 export default {
-    title: 'NavBar',
+    title: 'molecules/NavBar',
     component: Navbar,
 }
 

@@ -1,7 +1,7 @@
 import Brand from ".";
 
 export default {
-    title: 'Brand',
+    title: 'atoms/Brand',
     component: Brand
 } 
 

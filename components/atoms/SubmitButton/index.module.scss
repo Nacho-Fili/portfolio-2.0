@@ -1,0 +1,11 @@
+.submitButton {
+    width: var(--input-width);
+    margin-left: 10px;
+    min-height: 10vh;
+    border: 2px solid var(--accent-primary-color);
+    background-color: transparent;
+    color: #DDD;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 3px;
+}

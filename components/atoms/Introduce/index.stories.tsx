@@ -1,7 +1,7 @@
 import Introduce from ".";
 
 export default {
-    title: 'Introduce',
+    title: 'atoms/Introduce',
     component: Introduce,
 }
 

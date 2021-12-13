@@ -25,9 +25,8 @@ const Sidebar: React.FC = () => {
                     initial={{ background: '#000', opacity: 0 }}  
                     animate={{ background: '#000', opacity: 0.8 }}
                     style={{
-                        position: 'absolute',
                         left: `${sidebarWidth}vw`,
-                        width: `${100 - sidebarWidth}vw`
+                        width: `${100-sidebarWidth}vw`
                     }}
                     className={styles.cover} />}
         </div>

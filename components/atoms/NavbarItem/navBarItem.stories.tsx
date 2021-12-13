@@ -5,7 +5,7 @@ import NavbarOption from './types'
 import '../../../font.css'
 
 export default {
-    title: 'NavBarItem',
+    title: 'atoms/NavBarItem',
     component: NavBarItem,
 } as ComponentMeta <typeof NavBarItem>
 

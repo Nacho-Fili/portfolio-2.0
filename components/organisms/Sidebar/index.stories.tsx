@@ -1,7 +1,7 @@
 import Sidebar from ".";
 
 export default {
-    title: 'Sidebar',
+    title: 'organisms/Sidebar',
     component: Sidebar,
 }
 
