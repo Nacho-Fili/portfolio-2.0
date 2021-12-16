@@ -1,7 +1,7 @@
 import ContactButton from ".";
 
 export default {
-    title: 'atoms/button/ContactButton',
+    title: 'atoms/Buttons/ContactButton',
     component:  ContactButton,
 }
 
