@@ -1,8 +1,12 @@
-.container{
+.mainContainer {
     width: 100%;
     background-color: var(--bg-primary-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-block: 30px;
+    .container {
+        width: 100%;
+        background-color: var(--bg-primary-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-block: 30px;
+    }
 }
