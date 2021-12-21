@@ -1,34 +1,24 @@
-import React, { useRef, useLayoutEffect, useState, useCallback } from "react"
-import usePlaceholder from "../../../hooks/usePlaceholder"
+import React from "react"
 import styles from "./index.module.scss"
 
 interface Props {
     placeholder: string,
+    span?: number,
 }
 
-const Input: React.FC<Props> = ({ placeholder }) => {
+const Input: React.FC<Props> = ({ placeholder, span = 24 }) => {
 
-    const [inputValue, setInputValue] = useState<string>('')
-    const [inputFocus, setInputFocus] = useState(false)
-    const { init, spanRef, inputRef, getSpanPosition, getInputPosition } = usePlaceholder()
-
-    useLayoutEffect(init, [spanRef, inputRef])
 
     return(
-        <div className={styles.container}>
-            <span 
-                ref={spanRef}
-                style={getSpanPosition(inputFocus, inputValue)}
-                className={styles.placeholder}>{placeholder}</span>
+        <div 
+            className={styles.container} 
+            style={{ width: `${(span/24)*100}%` }}>
             <input 
-                onFocus={() => setInputFocus(true)} 
-                onBlur={() => setInputFocus(false)} 
-                ref={inputRef as React.Ref<HTMLInputElement>} 
+                placeholder={placeholder}
                 className={styles.input} 
                 type="text" 
-                style={getInputPosition()}
-                onChange={({ target }) => setInputValue(target.value)}/>
-        </div>
+                style={{ width: `100%` }}/>
+        </div> 
     )
 }
 

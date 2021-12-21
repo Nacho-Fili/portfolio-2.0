@@ -20,7 +20,7 @@ const TechnologyIconsSection: React.FC = () => {
     ]
     
     return (
-        <div className={styles.mainContainer}>
+        <div id="technologies" className={styles.mainContainer}>
             <SectionTitle title="Tecnologías"/>
             <div className={styles.container}>
                 <TechnologyIcons icons={icons} />

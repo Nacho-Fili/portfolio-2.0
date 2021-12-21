@@ -1,24 +1,20 @@
-import React, { useLayoutEffect, useState } from "react"
-import usePlaceholder from "../../../hooks/usePlaceholder"
+import React, { useState } from "react"
 import styles from "./index.module.scss"
 
-const TextArea: React.FC = () => {
-    const {init, inputRef, spanRef, getSpanPosition, getInputPosition} = usePlaceholder()
-    const [inputFocus, setInputFocus] = useState<boolean>(false)
+interface Props {
+    span?: number,
+}
+
+const TextArea: React.FC<Props> = ({ span = 24 }) => {
     const [inputValue, setInputValue] = useState<string>('')
-    
-    useLayoutEffect(init, [inputRef, spanRef])
 
     return (
-        <div>
-            <span style={getSpanPosition(inputFocus, inputValue)} ref={spanRef} className={styles.placeholder} >Mensaje</span>
-            <textarea 
-                style={getInputPosition()} 
-                ref={inputRef as React.Ref<HTMLTextAreaElement>} 
-                className={styles.textArea}
-                onFocus={() => setInputFocus(true)}
-                onBlur={() => setInputFocus(false)}
+        <div className={styles.container} style={{ width: `${(span/24)*100}%` }}>
+            <textarea
+                contentEditable
+                className={styles.input}
                 onChange={({ target }) => setInputValue(target.value)}
+                placeholder="Mensaje"
                 cols={30} rows={5}/>
         </div>
     )

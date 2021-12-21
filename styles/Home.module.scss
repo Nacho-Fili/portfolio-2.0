@@ -1,10 +1,11 @@
 .container{
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
   background-color: var(--bg-primary-color);
   .main {
     min-height: 100vh;
-    max-width: 80%;
+    width: 1280px;
+    max-width: 75%;
   }
 }

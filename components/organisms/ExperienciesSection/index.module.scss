@@ -1,10 +1,13 @@
 .mainContainer {
     width: 100%;
     background-color: var(--bg-primary-color);
+    min-height: 100vh;
     .container {
+        padding-top: 50px;
+        padding-left: 20px;
         background-color: var(--bg-primary-color);
-        min-height: 100vh;
         display: flex;
+        height: 80%;
         flex-direction: column;
         gap: 20px;
         justify-content: center;

@@ -4,7 +4,7 @@ import styles from "./index.module.scss"
 import SectionTitle from "../../atoms/SectionTitle";
 
 const ExperienciesSection: React.FC = () =>
-    <div className={styles.mainContainer}>
+    <div id="experience" className={styles.mainContainer}>
         <SectionTitle title="Experiencia"/>
         <div className={styles.container}>
             <ExperienciesTemplate 

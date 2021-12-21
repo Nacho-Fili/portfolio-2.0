@@ -6,23 +6,23 @@ import styles from "./index.module.scss"
 const items: NavbarOption[] = [
     {
         title: 'Proyectos',
-        href: '/projects',
+        href: '#projects',
     },
     {
         title: 'Conocimientos',
-        href: '/conocimientos',
+        href: '#technologies',
     },
     {
         title: 'Sobre mi',
-        href: '/about-me',
+        href: '#about-me',
     },
     {
         title: 'Experiencia',
-        href: '/experience',
+        href: '#experience',
     },
     {
         title: 'Contacto',
-        href: '/contact'
+        href: '#contact'
     }
 ]
 

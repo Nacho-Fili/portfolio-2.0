@@ -5,7 +5,7 @@ import styles from "./index.module.scss"
 
 const ContactSection: React.FC = () => {
     return(
-        <div className={styles.mainContainer}>
+        <div id="contact" className={styles.mainContainer}>
             <SectionTitle title="Contacto"/>
             <div className={styles.container}>
                 <ContactForm />

@@ -1,11 +1,17 @@
 import React from "react"
 import styles from "./index.module.scss"
 
-const SubmitButton: React.FC = () => {
+interface Props {
+    span?: number, 
+}
+
+const SubmitButton: React.FC<Props> = ({ span = 24 }) => {
     return (
-        <button className={styles.submitButton}>
-            Submit
-        </button>
+        <div className={styles.container} style={{ width:`${(span/24)*100}%`}}>
+            <button className={styles.submitButton}>
+                Submit
+            </button>
+        </div>
     )
 }
 

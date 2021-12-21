@@ -1,17 +1,26 @@
-.placeholder{
-    color: var(--text-color);
-    font-size: 0.8rem;
-    position: relative;
-}
-
-.textArea {
-    position: relative;
-    outline: none;
-    background-color: transparent;
-    border: 0;
-    border-bottom: 2px solid var(--accent-primary-color);
-    color: #DDD;
-    font-weight: 700;
-    font-size: 1.5rem;
-    width: var(--input-width);
+.container{
+    height: fit-content;
+    display: flex;
+    align-content: flex-start;
+    justify-content: flex-start;
+    padding: 0;
+    .input {
+        align-self: flex-start;
+        justify-self: flex-start;
+        outline: none;
+        resize: none;
+        background-color: var(--bg-alternative-color);
+        border-radius: 2px;
+        padding: 10px;
+        background-color: transparent;
+        border: 2px solid var(--accent-primary-color);
+        color: #DDD;
+        font-weight: 700;
+        font-size: 1.5rem;
+        margin-inline: 10px;
+        width: 100%;
+        &:focus {
+            border-color: var(--accent-secondary-color);
+        }
+    }
 }

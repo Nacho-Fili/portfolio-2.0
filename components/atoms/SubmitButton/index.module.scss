@@ -1,11 +1,21 @@
-.submitButton {
-    width: var(--input-width);
-    margin-left: 10px;
-    min-height: 10vh;
-    border: 2px solid var(--accent-primary-color);
-    background-color: transparent;
-    color: #DDD;
-    font-size: 1rem;
-    font-weight: 700;
-    border-radius: 3px;
+.container {
+    height: 10vh;
+    display: flex;
+    align-content: flex-start;
+    justify-content: flex-start;
+    padding: 0;
+    .submitButton {
+        align-self: flex-start;
+        justify-self: flex-start;
+        outline: none;
+        margin-inline: 20px;
+        min-height: 10vh;
+        width: 100%;
+        border: 2px solid var(--accent-primary-color);
+        background-color: transparent;
+        color: #DDD;
+        font-size: 1rem;
+        font-weight: 700;
+        border-radius: 3px;
+    }
 }
