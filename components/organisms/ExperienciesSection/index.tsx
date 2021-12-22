@@ -1,32 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ExperienciesTemplate from "../../molecules/ExperienceTemplate"
 import styles from "./index.module.scss"
 import SectionTitle from "../../atoms/SectionTitle";
+import api from "./api";
+import { Experience } from "../../../types";
 
-const ExperienciesSection: React.FC = () =>
-    <div id="experience" className={styles.mainContainer}>
-        <SectionTitle title="Experiencia"/>
-        <div className={styles.container}>
-            <ExperienciesTemplate 
-                title="Brain IT, LLC" 
-                init={2021} 
-                description="En 2021 fui contratado por Brainit como Junior Fullstack
-                Developer, teniendo la responsabilidad de registrar las
-                tareas que el equipo debe llevar adelante. Actualmente
-                me dedico principalmente a desarrollar tareas del
-                frontend en React con ant design y tareas de backend con
-                nodejs, utilizando AWS, especialmente Cognito y
-                DynamoDB. También adquirí experiencia en el desarrollo
-                con mono-repos. Como software de administración en mis
-                tareas diarias aprendí a utilizar Jira junto con Bitbucket."
-                technologies={[
-                    'AWS',
-                    'React',
-                    'Node',
-                    'Ant Design',
-                    'Bitbucket'
-                ]} />
+
+
+const ExperienciesSection: React.FC = () => {
+    const [experience, setExperience] = useState<Experience>()
+
+    useEffect(() => {
+        api
+            .get()
+            .then(({ data }) => setExperience(data.experience))
+    }, [])
+
+    return(
+        <div id="experience" className={styles.mainContainer}>
+            <SectionTitle title="Experiencia" />
+            <div className={styles.container}>
+                {experience && <ExperienciesTemplate experience={experience} />}
+            </div>
         </div>
-    </div>
+    )
+}
 
 export default ExperienciesSection

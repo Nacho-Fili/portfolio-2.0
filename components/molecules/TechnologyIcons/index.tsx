@@ -1,11 +1,7 @@
 import React from "react";
 import TechnologyIcon from "../../atoms/TechnologyIcon"
 import styles from "./index.module.scss"
-
-interface IconType {
-    url: string,
-    alt: string,
-}
+import { Icon as IconType } from "../../../types"
 
 interface Props {
     icons: IconType[],
@@ -13,7 +9,7 @@ interface Props {
 
 const TechnologyIcons: React.FC<Props> = ({ icons }) => 
     <div className={styles.iconsContainer} >
-        { icons.map(({ url, alt }) => <TechnologyIcon url={url} alt={alt} />) }
+        { icons.map(icon => <TechnologyIcon icon={icon} />) }
     </div>    
 
 export default TechnologyIcons

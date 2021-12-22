@@ -3,7 +3,6 @@ import Head from 'next/head'
 import Sidebar from '../components/organisms/Sidebar'
 import Hero from '../components/organisms/Hero'
 import styles from '../styles/Home.module.scss'
-import '../styles/globals.css'
 import ContactSection from '../components/organisms/ContactSection'
 import ExperienciesSection from "../components/organisms/ExperienciesSection"
 import TechnologyIconsSection from '../components/organisms/TechnologyIconsSection'

@@ -1,24 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import TechnologyIcons from "../../molecules/TechnologyIcons";
 import styles from "./index.module.scss"
 import SectionTitle from "../../atoms/SectionTitle";
+import { Icon } from "../../../types";
+import api from "./api";
 
 const TechnologyIconsSection: React.FC = () => {
-    const icons = [
-        {
-            url: 'https://icongr.am/devicon/typescript-plain.svg?size=128&color=currentColor',
-            alt: 'TypeScript'
-        },
-        {
-            url: 'https://icongr.am/devicon/javascript-original.svg?size=128&color=currentColor',
-            alt: 'JavaScript',
-        },
-        {
-            url: 'https://icongr.am/devicon/nodejs-original.svg?size=128&color=currentColor',
-            alt: 'Node',
-        }
-    ]
+    const [icons, setIcons] = useState<Icon[]>([])
     
+    useEffect(() => {
+        api
+            .get()
+            .then(({ data }) => setIcons(data.icons))
+
+    }, [])
+
     return (
         <div id="technologies" className={styles.mainContainer}>
             <SectionTitle title="Tecnologías"/>

@@ -1,11 +1,11 @@
 import React from "react";
+import { Icon } from "../../../types";
 import styles from "./index.module.scss"
 
 interface Props {
-    url: string,
-    alt: string,
+    icon: Icon
 }
 
-const TechnologyIcon: React.FC<Props> = ({ url, alt }) => <img className={styles.icon} src={url} alt={alt} />
+const TechnologyIcon: React.FC<Props> = ({ icon: { url, alt } }) => <img className={styles.icon} src={url} alt={alt} />
 
 export default TechnologyIcon
