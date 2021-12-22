@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import Experience from '../../models/Experience'
+import { Experience } from '../../types'
 import MongoPromise from "../../mongoConnection"
 
 type Data = {

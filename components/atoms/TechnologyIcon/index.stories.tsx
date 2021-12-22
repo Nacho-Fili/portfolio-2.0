@@ -6,5 +6,6 @@ export default {
 }
 
 const url = "https://icongr.am/devicon/typescript-plain.svg?size=128&color=currentColor"
-
-export const Dark = () => <TechnologyIcon url={url} alt="Typescript" />
+const alt = "TypeScript"
+const icon = {alt, url}
+export const Dark = () => <TechnologyIcon icon={icon}  />

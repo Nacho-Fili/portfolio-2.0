@@ -11,4 +11,12 @@ const end = 2021
 const technologies = ["React", "Node", "AWS", "DynamoDB"]
 const title = "Brain IT, LLC"
 
-export const dark = () => <ExperienceTemplate title={title} init={init} end={end} description={description} technologies={technologies}/>
+const experience = {
+    description,
+    init,
+    end,
+    technologies,
+    title
+}
+
+export const dark = () => <ExperienceTemplate experience={experience}/>
