@@ -9,7 +9,7 @@ interface Props {
 
 const TechnologyIcons: React.FC<Props> = ({ icons }) => 
     <div className={styles.iconsContainer} >
-        { icons.map(icon => <TechnologyIcon icon={icon} />) }
+        { icons.map(icon => <TechnologyIcon key={icon.alt} icon={icon} />) }
     </div>    
 
 export default TechnologyIcons

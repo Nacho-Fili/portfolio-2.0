@@ -11,7 +11,7 @@ interface Props{
 const NavbarItems: React.FC<Props> = ({ items, collapsed }) => {
     return(
         <ul className={styles.navBarListContainer}>
-            {items.map(item => <NavbarItem  collapsed={collapsed} item={item} />)}
+            {items.map(item => <NavbarItem key={item.title} collapsed={collapsed} item={item} />)}
         </ul>
     )
 }
