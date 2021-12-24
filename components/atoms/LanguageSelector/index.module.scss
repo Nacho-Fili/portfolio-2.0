@@ -1,0 +1,19 @@
+$size: 32px;
+
+
+.container {
+    path {
+        stroke: #DDD;
+        stroke-width: 1px;
+    }
+    .languageBorder {
+        position: fixed;
+        right: 20px;
+        top: 20px;
+        height: $size;
+        width: $size;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
