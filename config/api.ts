@@ -10,3 +10,8 @@ export const TechnologiesIconConfig: ApiConfig = {
     method: Method.GET,
     url: "/technology-icons",
 }
+
+export const ProfileConfig: ApiConfig = {
+    method: Method.GET,
+    url: "/profile",
+}

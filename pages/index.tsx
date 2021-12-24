@@ -6,6 +6,7 @@ import styles from '../styles/Home.module.scss'
 import ContactSection from '../components/organisms/ContactSection'
 import ExperienciesSection from "../components/organisms/ExperienciesSection"
 import TechnologyIconsSection from '../components/organisms/TechnologyIconsSection'
+import ProfileSection from '../components/organisms/ProfileSection'
 
 const Home: NextPage = () => {
   return (
@@ -19,6 +20,7 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <Sidebar/>
         <Hero/>
+        <ProfileSection/>
         <TechnologyIconsSection />
         <ExperienciesSection />
         <ContactSection />

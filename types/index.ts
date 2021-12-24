@@ -22,6 +22,14 @@ export enum Method {
     PATCH = 'PATCH'
 }
 
+export interface Profile {
+    src: string,
+    name: string,
+    lastname: string,
+    birthdate: Date,
+    text: string,
+}
+
 export interface ApiConfig {
     method: Method,
     url: string,

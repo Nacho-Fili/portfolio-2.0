@@ -1,0 +1,11 @@
+.mainContainer {
+    display: flex;
+    height: 60vh;
+    .textContainer {
+        padding-inline: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 40px;
+    }
+}
