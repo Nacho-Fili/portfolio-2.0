@@ -4,6 +4,7 @@ import styles from "./index.module.scss"
 import SectionTitle from "../../atoms/SectionTitle";
 import { Icon } from "../../../types";
 import api from "./api";
+import Loader from "../../atoms/Loader";
 
 const TechnologyIconsSection: React.FC = () => {
     const [icons, setIcons] = useState<Icon[]>([])
@@ -18,9 +19,12 @@ const TechnologyIconsSection: React.FC = () => {
     return (
         <div id="technologies" className={styles.mainContainer}>
             <SectionTitle title="Tecnologías"/>
-            <div className={styles.container}>
-                <TechnologyIcons icons={icons} />
-            </div>
+            {icons.length
+                ? <div className={styles.container}>
+                    <TechnologyIcons icons={icons} />
+                  </div>
+                : <Loader />
+            }
         </div>
     ) 
 }

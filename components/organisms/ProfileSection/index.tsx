@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Profile } from "../../../types";
+import Loader from "../../atoms/Loader";
 import SectionTitle from "../../atoms/SectionTitle";
 import PersonalProfile from "../../molecules/PersonalProfile";
 import api from "./api";
@@ -20,7 +21,7 @@ const ProfileSection: React.FC = () => {
             <SectionTitle title="Perfil"/>
             {profile
                     ? <PersonalProfile profileData={profile}/>
-                    : <p>Cargando...</p>
+                    : <Loader />
             }
         </div>
     )
