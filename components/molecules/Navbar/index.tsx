@@ -7,22 +7,27 @@ const items: NavbarOption[] = [
     {
         title: 'Proyectos',
         href: '#projects',
+        icon: 'https://icongr.am/material/code-tags.svg?size=32&color=c3edf0',
     },
     {
         title: 'Conocimientos',
         href: '#technologies',
+        icon: 'https://icongr.am/material/brain.svg?size=32&color=c3edf0',
     },
     {
         title: 'Sobre mi',
         href: '#about-me',
+        icon: 'https://icongr.am/material/account.svg?size=32&color=c3edf0',
     },
     {
         title: 'Experiencia',
         href: '#experience',
+        icon: 'https://icongr.am/material/bookshelf.svg?size=32&color=c3edf0',
     },
     {
         title: 'Contacto',
-        href: '#contact'
+        href: '#contact',
+        icon: 'https://icongr.am/material/comment-text.svg?size=32&color=c3edf0',
     }
 ]
 

@@ -11,7 +11,8 @@ const NavbarItem: React.FC<Props> = ({ item, collapsed }) => {
     return(
         <li className={styles.listItem}>
             <a className={styles.link} href={item.href}>
-                {collapsed ? item.title.charAt(0) : item.title} 
+                <img src={item.icon} alt={item.title} />
+                {!collapsed && item.title} 
             </a>
         </li>
     )
