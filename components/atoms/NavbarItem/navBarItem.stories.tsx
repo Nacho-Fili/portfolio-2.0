@@ -12,6 +12,7 @@ export default {
 const item: NavbarOption = {
     title: 'Home',
     href: '/home',
+    icon: 'https://icongr.am/material/brain.svg?size=32&color=c3edf0',
 }
 
 export const Dark = () => 

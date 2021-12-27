@@ -10,7 +10,7 @@ interface Props {
 const ProjectCards: React.FC<Props> = ({ projects }) => {
     return(
         <div className={styles.container}>
-            {projects.map(project => <ProjectCard project={project}/>)}
+            {projects.map(project => <ProjectCard key={project.description} project={project}/>)}
         </div>
     )
 }
