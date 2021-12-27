@@ -1,0 +1,8 @@
+.container {
+    border: 2px solid #DDD;
+    width: fit-content;
+    max-width: 30vw;
+    height: 100%;
+    max-height: var(--card-height);
+    border-radius: 15px;
+}

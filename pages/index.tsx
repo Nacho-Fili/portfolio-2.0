@@ -9,6 +9,7 @@ import ExperienciesSection from "../components/organisms/ExperienciesSection"
 import TechnologyIconsSection from '../components/organisms/TechnologyIconsSection'
 import ProfileSection from '../components/organisms/ProfileSection'
 import LanguageSelector from "../components/atoms/LanguageSelector"
+import ProjectsSection from '../components/organisms/ProjectsSection'
 
 const Home: NextPage = () => {
   return (
@@ -23,6 +24,7 @@ const Home: NextPage = () => {
         <LanguageSelector />
         <Sidebar/>
         <Hero/>
+        <ProjectsSection />
         <ProfileSection/>
         <TechnologyIconsSection />
         <ExperienciesSection />

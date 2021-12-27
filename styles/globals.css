@@ -1,5 +1,6 @@
 html,
 body {
+  min-width: 100%;
   padding: 0 !important;
   margin: 0 !important;
   --bg-primary-color: #293039;
@@ -9,6 +10,7 @@ body {
   --accent-primary-color: #63E2EB;
   --accent-secondary-color: #00C2CB;
   --input-width: 600px;
+  --card-height: 80vh;
 }
 
 * {

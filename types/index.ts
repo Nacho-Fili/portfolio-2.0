@@ -34,3 +34,11 @@ export interface ApiConfig {
     method: Method,
     url: string,
 }
+
+export interface Project {
+    name: string,
+    imageSrc: string, 
+    description: string,
+    date: Date,
+    githubLink: string,
+}
