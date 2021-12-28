@@ -41,4 +41,5 @@ export interface Project {
     description: string,
     date: Date,
     githubLink: string,
+    technologies: string[],
 }
