@@ -3,7 +3,7 @@ import Navbar from "../../molecules/Navbar"
 import Brand from "../../atoms/Brand"
 import styles from "./index.module.scss"
 import CollapseButton from "../../atoms/CollapseButton"
-import { motion, Variants } from "framer-motion"
+import { motion } from "framer-motion"
 
 const Sidebar: React.FC = () => {
     const [collapsed, setCollapsed] = useState(true)

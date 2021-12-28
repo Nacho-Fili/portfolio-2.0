@@ -1,13 +1,43 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import Introduce from "../../atoms/Introduce"
 import ContactButton from "../../atoms/ContactButton"
 import styles from "./index.module.scss"
+import { motion } from "framer-motion"
+
+interface Props {
+    show?: boolean,
+}
+
+const OpacityAnimation: React.FC<Props> = ({ children, show=true }) => {
+    return(
+        <motion.div
+            initial={{ opacity: 0, width: "100%" }}
+            animate={{ opacity: show ? 1 : 0 }}
+            transition={{ duration: 1.5 }}>
+            { children }
+        </motion.div>
+    )
+}
 
 const Hero: React.FC = () => {
+
+    const [ secondsAfterIntroduce, setSecondsAfterIntroduce ] = useState(0)
+    
+    useEffect(() => {
+        const interval = window.setInterval(() => { 
+            setSecondsAfterIntroduce(prev => prev+500) 
+        }, 500)
+        return () => window.clearInterval(interval)
+    }, [])
+
     return(
         <div className={styles.container}>
-            <Introduce/>
-            <ContactButton />
+            <OpacityAnimation>
+                <Introduce />
+            </OpacityAnimation>
+            <OpacityAnimation show={secondsAfterIntroduce >= 1500}>
+                <ContactButton />
+            </OpacityAnimation>
         </div>
     )
 }

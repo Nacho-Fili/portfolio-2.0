@@ -11,7 +11,6 @@ const TextArea: React.FC<Props> = ({ span = 24 }) => {
     return (
         <div className={styles.container} style={{ width: `${(span/24)*100}%` }}>
             <textarea
-                contentEditable
                 className={styles.input}
                 onChange={({ target }) => setInputValue(target.value)}
                 placeholder="Mensaje"
