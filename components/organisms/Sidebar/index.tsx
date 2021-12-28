@@ -3,7 +3,7 @@ import Navbar from "../../molecules/Navbar"
 import Brand from "../../atoms/Brand"
 import styles from "./index.module.scss"
 import CollapseButton from "../../atoms/CollapseButton"
-import { motion } from "framer-motion"
+import { motion, Variants } from "framer-motion"
 
 const Sidebar: React.FC = () => {
     const [collapsed, setCollapsed] = useState(true)
@@ -13,7 +13,7 @@ const Sidebar: React.FC = () => {
     return(
         <div style={{display: 'flex'}}>
             <motion.div
-                initial={{ width: collapsed ? `${sidebarWidth}vw` : '8vw' }}
+                initial={{ width: '8vw' }}
                 animate={{ width: collapsed ? '8vw': `${sidebarWidth}vw`}}
                 className={collapsed ? styles.collapsed : styles.notCollapsed}>
                 <Brand collapsed={collapsed} />

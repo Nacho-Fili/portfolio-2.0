@@ -15,7 +15,6 @@ $sidebar-width: 50vw;
 
 .collapsed {
     @include sidebar;
-    width: 8vw;
 }
 
 .notCollapsed {
