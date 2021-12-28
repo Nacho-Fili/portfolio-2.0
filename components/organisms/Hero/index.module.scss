@@ -1,3 +1,5 @@
+@import "../../../styles/mixins";
+
 .container {
     min-height: 100vh;
     min-width: 100%;
@@ -8,4 +10,11 @@
     padding-block: 20% 10%;
     padding-left: 10%;
     background-color: var(--bg-primary-color);
+}
+
+@include for-mobile {
+    .contactButtonContainer {
+        display: flex;
+        justify-content: center;
+    }
 }

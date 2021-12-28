@@ -1,7 +1,15 @@
+@import "../../../styles/mixins";
+
 .name {
     color: var(--text-color)
 }
 
 .subtitle {
     color: var(--text-alternative-color)
+}
+
+@include for-mobile {
+    .name, .subtitle {
+        text-align: center;
+    }
 }

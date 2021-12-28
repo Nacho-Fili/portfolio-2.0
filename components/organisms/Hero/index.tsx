@@ -6,11 +6,13 @@ import { motion } from "framer-motion"
 
 interface Props {
     show?: boolean,
+    className?: string,
 }
 
-const OpacityAnimation: React.FC<Props> = ({ children, show=true }) => {
+const OpacityAnimation: React.FC<Props> = ({ children, show=true, className="" }) => {
     return(
         <motion.div
+            className={className}
             initial={{ opacity: 0, width: "100%" }}
             animate={{ opacity: show ? 1 : 0 }}
             transition={{ duration: 1.5 }}>
@@ -35,7 +37,7 @@ const Hero: React.FC = () => {
             <OpacityAnimation>
                 <Introduce />
             </OpacityAnimation>
-            <OpacityAnimation show={secondsAfterIntroduce >= 1500}>
+            <OpacityAnimation className={styles.contactButtonContainer} show={secondsAfterIntroduce >= 1500}>
                 <ContactButton />
             </OpacityAnimation>
         </div>
