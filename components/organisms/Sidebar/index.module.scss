@@ -1,6 +1,8 @@
+@import "../../../styles/mixins";
+
 $sidebar-width: 50vw;
 
-@mixin sidebar{
+.collapsed, .notCollapsed {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -13,16 +15,14 @@ $sidebar-width: 50vw;
     z-index: 2;
 }
 
-.collapsed {
-    @include sidebar;
-}
-
-.notCollapsed {
-    @include sidebar;
-}
-
 .cover {
     position: fixed;
     height: 100%;
     z-index: 2;
+}
+
+@include for-mobile {
+    .collapsed {
+        display: none;
+    }
 }

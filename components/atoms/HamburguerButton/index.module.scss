@@ -1,0 +1,27 @@
+@import "../../../styles/mixins";
+
+$size: 32px;
+
+.button {
+    display: none;        
+}
+
+@include for-mobile {
+    .container {
+        path {
+            stroke: #DDD;
+            stroke-width: 1px;
+        }
+        .button {
+            display: block;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            height: $size;
+            width: $size;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -13,8 +13,13 @@
 }
 
 @include for-mobile {
-    .contactButtonContainer {
-        display: flex;
+    .container {
+        padding-inline: 0;
         justify-content: center;
+        gap: 30px;
+        .contactButtonContainer {
+            display: flex;
+            justify-content: center;
+        }
     }
 }

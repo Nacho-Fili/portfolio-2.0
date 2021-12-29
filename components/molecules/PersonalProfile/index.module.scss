@@ -1,3 +1,5 @@
+@import "../../../styles/mixins";
+
 .mainContainer {
     display: flex;
     height: 60vh;
@@ -7,5 +9,11 @@
         flex-direction: column;
         justify-content: flex-start;
         gap: 40px;
+    }
+}
+
+@include for-mobile{
+    .mainContainer{
+        flex-direction: column;
     }
 }

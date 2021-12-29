@@ -4,14 +4,16 @@ import Brand from "../../atoms/Brand"
 import styles from "./index.module.scss"
 import CollapseButton from "../../atoms/CollapseButton"
 import { motion, Variants } from "framer-motion"
+import HamburguerButton from "../../atoms/HamburguerButton"
 
 const Sidebar: React.FC = () => {
     const [collapsed, setCollapsed] = useState(true)
 
-    const sidebarWidth = 35
+    const sidebarWidth = 80
 
     return(
         <div style={{display: 'flex'}}>
+            <HamburguerButton onClick={() => setCollapsed(prev => !prev)}/>
             <motion.div
                 initial={{ width: '8vw' }}
                 animate={{ width: collapsed ? '8vw': `${sidebarWidth}vw`}}
