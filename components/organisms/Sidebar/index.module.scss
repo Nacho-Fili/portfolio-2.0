@@ -1,6 +1,7 @@
 @import "../../../styles/mixins";
 
-$sidebar-width: 50vw;
+$not-collapsed-width-desktop: 30vw;
+$not-collapsed-width-mobile: 80vw;
 
 .collapsed, .notCollapsed {
     display: flex;
@@ -19,10 +20,13 @@ $sidebar-width: 50vw;
     position: fixed;
     height: 100%;
     z-index: 2;
+    width: calc(100vw - $not-collapsed-width-desktop);
+    left: $not-collapsed-width-desktop;
 }
 
 @include for-mobile {
-    .collapsed {
-        display: none;
+    .cover {
+        left: $not-collapsed-width-mobile !important;
+        width: calc(100vw - $not-collapsed-width-mobile);
     }
 }
