@@ -15,5 +15,9 @@
 @include for-mobile{
     .mainContainer{
         flex-direction: column;
+        height: fit-content;
+        .textContainer {
+            padding: 0;
+        }
     }
 }

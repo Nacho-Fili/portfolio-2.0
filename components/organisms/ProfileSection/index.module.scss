@@ -1,3 +1,11 @@
+@import "../../../styles/mixins";
+
 .profileSection{
     height: 100vh;
+}
+
+@include for-mobile {
+    .profileSection {
+        height: fit-content;
+    }
 }
