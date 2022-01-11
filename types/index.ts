@@ -11,7 +11,8 @@ export interface Experience {
     end?: number,
     title: string,
     description: string,
-    technologies: string[]
+    technologies: string[],
+    descriptionTranslations?: translate,
 }
 
 export enum Method {
@@ -33,6 +34,7 @@ export interface Profile {
     lastname: string,
     birthdate: Date,
     text: string,
+    textTranslations?: translate
 }
 
 export interface ApiConfig {
@@ -48,4 +50,9 @@ export interface Project {
     githubLink: string,
     webLink: string,
     technologies: string[],
+}
+
+export type translate = {
+    [languages.EN]: string,
+    [languages.ES]: string,
 }

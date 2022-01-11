@@ -15,9 +15,9 @@ const ProfileSection: React.FC = () => {
 
     useEffect(() => {
         api
-            .get()
+            .get(selectedLanguage)
             .then(({ data }) => setProfile(data.profile))
-    }, [])
+    }, [selectedLanguage])
     
     return(
         <div id="about-me" className={styles.profileSection}>

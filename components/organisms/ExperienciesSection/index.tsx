@@ -18,10 +18,10 @@ const ExperienciesSection: React.FC = () => {
     useEffect(() => {
         setIsLoading(true)
         api
-            .get()
+            .get(selectedLanguage)
             .then(({ data }) => setExperience(data.experience))
             .finally(() => setIsLoading(false))
-    }, [])
+    }, [selectedLanguage])
     
     return(
         <div id="experience" className={styles.mainContainer}>

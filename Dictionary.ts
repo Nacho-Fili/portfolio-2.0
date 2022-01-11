@@ -1,9 +1,4 @@
-import { languages } from "./types"
-
-type translate = {
-    [languages.EN]: string,
-    [languages.ES]: string,
-}
+import { languages, translate } from "./types"
 
 type translates = {
     introduction: translate,
@@ -17,6 +12,8 @@ type translates = {
     about: translate,
     experience: translate,
     contact: translate,
+    age: translate,
+    birthdate: translate,
 }
 
 const Dictionary: translates = {
@@ -63,6 +60,14 @@ const Dictionary: translates = {
     contact: {
         [languages.EN]: "Contact",
         [languages.ES]: "Contacto",
+    },
+    age: {
+        [languages.EN]: "Age",
+        [languages.ES]: "Edad",
+    },
+    birthdate: {
+        [languages.EN]: "Birthdate",
+        [languages.ES]: "Fecha de nacimiento",
     }
 }
 
