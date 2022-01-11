@@ -3,6 +3,7 @@ import styles from "./index.module.scss"
 import { motion } from "framer-motion"
 import LanguageOption from "../../atoms/LanguageOption";
 import LanguageContext from "../../../context/language";
+import { languages } from "../../../types";
 
 const LanguageSelectorModal: React.FC = () => {
 
@@ -16,8 +17,8 @@ const LanguageSelectorModal: React.FC = () => {
             className={styles.cover}>
             <div className={styles.modal}>
                 <div onClick={hideOptions} className={styles.closeButton}>X</div>
-                <LanguageOption label="Español" onClick={() => { selectLanguage("es-AR") }}/>
-                <LanguageOption label="English" onClick={() => { selectLanguage("en-US") }}/>
+                <LanguageOption label="Español" onClick={() => { selectLanguage(languages.ES) }}/>
+                <LanguageOption label="English" onClick={() => { selectLanguage(languages.EN) }}/>
             </div>
         </motion.div>  
     ) 
