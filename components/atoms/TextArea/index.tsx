@@ -1,4 +1,6 @@
-import React, { useState } from "react"
+import React, { useContext, useState } from "react"
+import LanguageContext from "../../../context/language"
+import Dictionary from "../../../Dictionary"
 import styles from "./index.module.scss"
 
 interface Props {
@@ -6,6 +8,7 @@ interface Props {
 }
 
 const TextArea: React.FC<Props> = ({ span = 24 }) => {
+    const { selectedLanguage } = useContext(LanguageContext)
     const [inputValue, setInputValue] = useState<string>('')
 
     return (
@@ -13,7 +16,7 @@ const TextArea: React.FC<Props> = ({ span = 24 }) => {
             <textarea
                 className={styles.input}
                 onChange={({ target }) => setInputValue(target.value)}
-                placeholder="Mensaje"
+                placeholder={Dictionary.message[selectedLanguage]}
                 cols={30} rows={5}/>
         </div>
     )
