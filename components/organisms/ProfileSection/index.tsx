@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import LanguageContext from "../../../context/language";
+import Dictionary from "../../../Dictionary";
 import { Profile } from "../../../types";
 import Loader from "../../atoms/Loader";
 import SectionTitle from "../../atoms/SectionTitle";
@@ -9,6 +11,7 @@ import styles from "./index.module.scss"
 const ProfileSection: React.FC = () => {
     
     const [profile, setProfile] = useState<Profile | undefined>(undefined)
+    const { selectedLanguage } = useContext(LanguageContext)
 
     useEffect(() => {
         api
@@ -18,7 +21,7 @@ const ProfileSection: React.FC = () => {
     
     return(
         <div id="about-me" className={styles.profileSection}>
-            <SectionTitle title="Perfil"/>
+            <SectionTitle title={Dictionary.profile[selectedLanguage]}/>
             {profile
                     ? <PersonalProfile profileData={profile}/>
                     : <Loader />
