@@ -22,6 +22,11 @@ export enum Method {
     PATCH = 'PATCH'
 }
 
+export enum languages {
+    ES = "es-AR",
+    EN = "en-US",
+}
+
 export interface Profile {
     src: string,
     name: string,
