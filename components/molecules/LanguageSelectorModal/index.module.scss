@@ -1,0 +1,30 @@
+.cover {
+    position: absolute;
+    left: 0;
+    z-index: 3;
+    min-height: 100%;
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .modal {
+        .closeButton {
+            padding: 10px;
+            color: #DDD;
+            position: relative;
+            align-self: flex-start;
+            justify-self: center;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        min-width: 400px;
+        min-height: 200px;
+        background-color: var(--bg-primary-color);
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: 40px 1fr 1fr 40px;
+        place-items: center;
+        gap: 60px;
+    } 
+}

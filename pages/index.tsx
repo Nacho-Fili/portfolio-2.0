@@ -10,6 +10,7 @@ import TechnologyIconsSection from '../components/organisms/TechnologyIconsSecti
 import ProfileSection from '../components/organisms/ProfileSection'
 import LanguageSelector from "../components/atoms/LanguageSelector"
 import ProjectsSection from '../components/organisms/ProjectsSection'
+import { LanguageProvider } from '../context/language'
 
 const Home: NextPage = () => {
   return (
@@ -21,14 +22,16 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <LanguageSelector />
-        <Sidebar/>
-        <Hero/>
-        <ProjectsSection />
-        <ProfileSection/>
-        <TechnologyIconsSection />
-        <ExperienciesSection />
-        <ContactSection />
+        <LanguageProvider>
+          <LanguageSelector />
+          <Sidebar/>
+          <Hero/>
+          <ProjectsSection />
+          <ProfileSection/>
+          <TechnologyIconsSection />
+          <ExperienciesSection />
+          <ContactSection />
+        </LanguageProvider>
       </main>
     </div>
   )
