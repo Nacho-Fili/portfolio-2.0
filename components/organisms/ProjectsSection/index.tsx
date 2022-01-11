@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import LanguageContext from "../../../context/language";
+import Dictionary from "../../../Dictionary";
 import { Project } from "../../../types";
 import Loader from "../../atoms/Loader";
 import SectionTitle from "../../atoms/SectionTitle";
@@ -7,7 +9,8 @@ import styles from "./index.module.scss"
 
 const ProjectsSection: React.FC = () => {
     const [projects, setProjects] = useState<Project[]>([])
-    
+    const { selectedLanguage } = useContext(LanguageContext)
+
     useEffect(() => {
         const project: Project = {
             imageSrc: "https://www.dropbox.com/s/v28g4u9bgfjz67d/MotorcyclistManager.png?raw=1",
@@ -27,7 +30,7 @@ const ProjectsSection: React.FC = () => {
 
     return(
         <div className={styles.container} id="projects">
-            <SectionTitle title="Proyectos"/>
+            <SectionTitle title={Dictionary.projects[selectedLanguage]}/>
             {projects.length
                 ? <ProjectCards projects={projects}/>
                 : <Loader />
