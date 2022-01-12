@@ -18,13 +18,13 @@
                 cursor: pointer;
             }
         }
-        min-width: 400px;
+        width: 400px;
         min-height: 200px;
+        max-width: 70%;
         background-color: var(--bg-primary-color);
         border-radius: 10px;
         display: grid;
-        grid-template-columns: 40px 1fr 1fr 40px;
+        grid-template-columns: 10% 1fr 1fr 10%;
         place-items: center;
-        gap: 60px;
     } 
 }

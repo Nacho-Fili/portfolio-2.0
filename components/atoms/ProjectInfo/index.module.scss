@@ -25,7 +25,7 @@
             color: #DDD;
         }
         .description {
-            max-height: 130px;
+            height: 130px;
             max-width: 30vw;
             overflow-y: scroll;
             &::-webkit-scrollbar {
@@ -50,6 +50,7 @@
             font-style: italic;
             font-weight: 600;
             color: #DDD;
+            height: 50px;
         }
     }
 }

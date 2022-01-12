@@ -7,7 +7,7 @@ const LanguageContext = React.createContext({ showOptions: () => {}, hideOptions
 export const LanguageProvider: React.FC = ({ children }) => {
 
     const [showLanguageOptions, setShowLanguageOptions] = useState<boolean>(false)
-    const [selectedLanguage, setSelectedLanguage] = useState<languages>(languages.ES)
+    const [selectedLanguage, setSelectedLanguage] = useState<languages>(languages.EN)
 
     const showOptions = () => setShowLanguageOptions(true)
     const hideOptions = () => setShowLanguageOptions(false)
