@@ -42,17 +42,22 @@ class MessageSender {
     }
 
     sendMail = async (message: string) => {
-        this.mailer.sendEmail({
-            auth: this.auth,
-            from: this.mailsConfig.from,
-            to: this.mailsConfig.to,
-            text: message,
-            onError: () => console.error(`Error enviando email de ${this.mailsConfig.from} a ${this.mailsConfig.to}`),
-            onSuccess: () => {
-                console.log(`Mensaje enviado correctamente de ${this.mailsConfig.from} a ${this.mailsConfig.to}`)
-                return message
+        return new Promise ((resolve, reject) => {
+            this.mailer.sendEmail({
+                auth: this.auth,
+                from: this.mailsConfig.from,
+                to: this.mailsConfig.to,
+                text: message,
+                onError: () => {
+                    console.error(`Error enviando email de ${this.mailsConfig.from} a ${this.mailsConfig.to}`)
+                    reject()
+                },
+                onSuccess: () => {
+                    console.log(`Mensaje enviado correctamente de ${this.mailsConfig.from} a ${this.mailsConfig.to}`)
+                    resolve(message)
+                }
             }
-        })
+        )})
     } 
 }
 
