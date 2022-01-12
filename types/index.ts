@@ -50,6 +50,7 @@ export interface Project {
     githubLink: string,
     webLink: string,
     technologies: string[],
+    descriptionTranslations?: translate,
 }
 
 export type translate = {
