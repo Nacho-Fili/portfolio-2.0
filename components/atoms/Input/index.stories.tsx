@@ -7,5 +7,5 @@ export default {
 
 export const Dark = () => 
     <div style={{ padding: 40 }}>
-        <Input placeholder="Name"/>
+        <Input onChange={() => {}} placeholder="Name"/>
     </div>

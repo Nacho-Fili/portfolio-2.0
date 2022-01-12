@@ -5,4 +5,4 @@ export default {
     component: Inputs,
 }
 
-export const Dark = () => <Inputs />
+export const Dark = () => <Inputs setters={{ name: () => {}, phone: () => {}, email: () => {}, message: () => {},}}/>

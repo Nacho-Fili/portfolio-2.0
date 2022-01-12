@@ -5,4 +5,4 @@ export default {
     component: TextArea,
 }
 
-export const Dark = () => <TextArea />
+export const Dark = () => <TextArea onChange={() => {}}/>
