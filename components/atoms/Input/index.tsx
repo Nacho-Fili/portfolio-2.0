@@ -1,13 +1,14 @@
-import React from "react"
+import React, { ChangeEventHandler, HTMLInputTypeAttribute } from "react"
 import styles from "./index.module.scss"
 
 interface Props {
     placeholder: string,
     span?: number,
+    onChange: ChangeEventHandler<HTMLInputElement>,
+    type?: HTMLInputTypeAttribute,
 }
 
-const Input: React.FC<Props> = ({ placeholder, span = 24 }) => {
-
+const Input: React.FC<Props> = ({ placeholder, span = 24, onChange, type }) => {
 
     return(
         <div 
@@ -16,8 +17,9 @@ const Input: React.FC<Props> = ({ placeholder, span = 24 }) => {
             <input 
                 placeholder={placeholder}
                 className={styles.input} 
-                type="text" 
-                style={{ width: `100%` }}/>
+                type={ type || "text"} 
+                style={{ width: `100%` }}
+                onChange={onChange}/>
         </div> 
     )
 }

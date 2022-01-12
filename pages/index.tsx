@@ -11,6 +11,7 @@ import ProfileSection from '../components/organisms/ProfileSection'
 import LanguageSelector from "../components/atoms/LanguageSelector"
 import ProjectsSection from '../components/organisms/ProjectsSection'
 import { LanguageProvider } from '../context/language'
+import { MessageProvider } from '../context/message'
 
 const Home: NextPage = () => {
   return (
@@ -22,16 +23,18 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <LanguageProvider>
-          <LanguageSelector />
-          <Sidebar/>
-          <Hero/>
-          <ProjectsSection />
-          <ProfileSection/>
-          <TechnologyIconsSection />
-          <ExperienciesSection />
-          <ContactSection />
-        </LanguageProvider>
+        <MessageProvider>
+          <LanguageProvider>
+            <LanguageSelector />
+            <Sidebar/>
+            <Hero/>
+            <ProjectsSection />
+            <ProfileSection/>
+            <TechnologyIconsSection />
+            <ExperienciesSection />
+            <ContactSection />
+          </LanguageProvider>
+        </MessageProvider>
       </main>
     </div>
   )

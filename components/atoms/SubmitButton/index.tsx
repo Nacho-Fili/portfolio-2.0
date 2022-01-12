@@ -8,7 +8,7 @@ interface Props {
 const SubmitButton: React.FC<Props> = ({ span = 24 }) => {
     return (
         <div className={styles.container} style={{ width:`${(span/24)*100}%`}}>
-            <button className={styles.submitButton}>
+            <button type="submit" className={styles.submitButton}>
                 Submit
             </button>
         </div>

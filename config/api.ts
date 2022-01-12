@@ -15,3 +15,8 @@ export const ProfileConfig: ApiConfig = {
     method: Method.GET,
     url: "/profile",
 }
+
+export const SendEmailConfig: ApiConfig = {
+    method: Method.POST,
+    url: "/sendEmail",
+}

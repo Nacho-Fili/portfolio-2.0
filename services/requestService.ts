@@ -1,7 +1,7 @@
 import axios, { AxiosPromise } from "axios"
 import { ApiConfig } from "../types"
 
-const requestService: (resource: ApiConfig, queryParams?: any[]) => AxiosPromise = (resource, queryParams) => {
+const requestService: (resource: ApiConfig, queryParams?: any[], data?: any) => AxiosPromise = (resource, queryParams, data) => {
     let { method, url } = resource
     queryParams?.forEach((queryParam) => {
         url += `?${queryParam.key}=${queryParam.value}`
@@ -10,6 +10,7 @@ const requestService: (resource: ApiConfig, queryParams?: any[]) => AxiosPromise
         baseURL: '/api',
         url,
         method,
+        data,
     })
 }
 
