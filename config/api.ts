@@ -20,3 +20,8 @@ export const SendEmailConfig: ApiConfig = {
     method: Method.POST,
     url: "/sendEmail",
 }
+
+export const ProjectsConfig: ApiConfig = {
+    method: Method.GET,
+    url: "/projects",
+}
